@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docker 常用命令 | 南风知我意</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/images/nf.png">
+    <meta name="description" content="后端开发 南风知我意的个人网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.d2a44814.css" as="style"><link rel="preload" href="/assets/js/app.fa9b922e.js" as="script"><link rel="preload" href="/assets/js/2.25cc5d58.js" as="script"><link rel="preload" href="/assets/js/10.a87e3e41.js" as="script"><link rel="prefetch" href="/assets/js/11.0364ff90.js"><link rel="prefetch" href="/assets/js/12.311eca75.js"><link rel="prefetch" href="/assets/js/13.0157e368.js"><link rel="prefetch" href="/assets/js/14.12ac4ad9.js"><link rel="prefetch" href="/assets/js/15.356aa848.js"><link rel="prefetch" href="/assets/js/16.bc1151d9.js"><link rel="prefetch" href="/assets/js/17.def4874d.js"><link rel="prefetch" href="/assets/js/18.e350c724.js"><link rel="prefetch" href="/assets/js/19.e83e1d7c.js"><link rel="prefetch" href="/assets/js/20.c97de166.js"><link rel="prefetch" href="/assets/js/21.d2f7bd5c.js"><link rel="prefetch" href="/assets/js/22.41adaee0.js"><link rel="prefetch" href="/assets/js/23.799354b2.js"><link rel="prefetch" href="/assets/js/24.95fca6d6.js"><link rel="prefetch" href="/assets/js/25.465e8b94.js"><link rel="prefetch" href="/assets/js/26.16f7559c.js"><link rel="prefetch" href="/assets/js/27.ff4ffb1f.js"><link rel="prefetch" href="/assets/js/28.044518d6.js"><link rel="prefetch" href="/assets/js/29.dd693b24.js"><link rel="prefetch" href="/assets/js/3.ac93ca0a.js"><link rel="prefetch" href="/assets/js/30.962c7f0b.js"><link rel="prefetch" href="/assets/js/31.ed040a46.js"><link rel="prefetch" href="/assets/js/32.173e5f2d.js"><link rel="prefetch" href="/assets/js/33.02ea8a18.js"><link rel="prefetch" href="/assets/js/34.bb262992.js"><link rel="prefetch" href="/assets/js/35.896e9f41.js"><link rel="prefetch" href="/assets/js/36.1ddb7248.js"><link rel="prefetch" href="/assets/js/37.334aca7d.js"><link rel="prefetch" href="/assets/js/38.c0b524c3.js"><link rel="prefetch" href="/assets/js/39.1fa89074.js"><link rel="prefetch" href="/assets/js/4.ffc5bef0.js"><link rel="prefetch" href="/assets/js/40.d6313086.js"><link rel="prefetch" href="/assets/js/41.3f1e2bbd.js"><link rel="prefetch" href="/assets/js/42.29fd018f.js"><link rel="prefetch" href="/assets/js/43.3f4c39b8.js"><link rel="prefetch" href="/assets/js/44.7ecbe764.js"><link rel="prefetch" href="/assets/js/45.bec8ffa7.js"><link rel="prefetch" href="/assets/js/46.4d6373ca.js"><link rel="prefetch" href="/assets/js/47.a2c38019.js"><link rel="prefetch" href="/assets/js/48.36ff8bd5.js"><link rel="prefetch" href="/assets/js/49.d7349f0b.js"><link rel="prefetch" href="/assets/js/5.48532fea.js"><link rel="prefetch" href="/assets/js/50.3da1f291.js"><link rel="prefetch" href="/assets/js/51.45ef4844.js"><link rel="prefetch" href="/assets/js/52.8986512b.js"><link rel="prefetch" href="/assets/js/53.749813e1.js"><link rel="prefetch" href="/assets/js/54.96f2a134.js"><link rel="prefetch" href="/assets/js/55.4879e422.js"><link rel="prefetch" href="/assets/js/56.e8428beb.js"><link rel="prefetch" href="/assets/js/57.ca777ff0.js"><link rel="prefetch" href="/assets/js/58.dbb557db.js"><link rel="prefetch" href="/assets/js/59.df72912c.js"><link rel="prefetch" href="/assets/js/6.5eff19f1.js"><link rel="prefetch" href="/assets/js/60.d1ef93aa.js"><link rel="prefetch" href="/assets/js/61.b14ca761.js"><link rel="prefetch" href="/assets/js/62.2b179e3c.js"><link rel="prefetch" href="/assets/js/63.2f9c3889.js"><link rel="prefetch" href="/assets/js/64.9aa6d939.js"><link rel="prefetch" href="/assets/js/65.566da386.js"><link rel="prefetch" href="/assets/js/66.ce6ae55d.js"><link rel="prefetch" href="/assets/js/67.ba64f924.js"><link rel="prefetch" href="/assets/js/68.bfc2523e.js"><link rel="prefetch" href="/assets/js/69.1df26faa.js"><link rel="prefetch" href="/assets/js/7.100b5646.js"><link rel="prefetch" href="/assets/js/70.2063729c.js"><link rel="prefetch" href="/assets/js/71.ec1b8104.js"><link rel="prefetch" href="/assets/js/72.324f3a5e.js"><link rel="prefetch" href="/assets/js/73.17c953d3.js"><link rel="prefetch" href="/assets/js/74.0445d80d.js"><link rel="prefetch" href="/assets/js/75.d323dbb7.js"><link rel="prefetch" href="/assets/js/76.01731c02.js"><link rel="prefetch" href="/assets/js/77.040d470d.js"><link rel="prefetch" href="/assets/js/78.33374f69.js"><link rel="prefetch" href="/assets/js/79.5b3d3b01.js"><link rel="prefetch" href="/assets/js/8.298793bd.js"><link rel="prefetch" href="/assets/js/80.3d4ad376.js"><link rel="prefetch" href="/assets/js/81.7fa4543b.js"><link rel="prefetch" href="/assets/js/82.31832c90.js"><link rel="prefetch" href="/assets/js/83.291a632f.js"><link rel="prefetch" href="/assets/js/84.3efd8628.js"><link rel="prefetch" href="/assets/js/85.27beb273.js"><link rel="prefetch" href="/assets/js/86.d5228a1d.js"><link rel="prefetch" href="/assets/js/87.cad2873f.js"><link rel="prefetch" href="/assets/js/88.76fdf951.js"><link rel="prefetch" href="/assets/js/89.a9d71c3d.js"><link rel="prefetch" href="/assets/js/9.04671bc7.js"><link rel="prefetch" href="/assets/js/90.da55c751.js"><link rel="prefetch" href="/assets/js/91.0b29096c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d2a44814.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">南风知我意</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/java-core/exception.html" class="nav-link">
+  Java核心基础
+</a></div><div class="nav-item"><a href="/jvm/structure.html" class="nav-link">
+  JVM学习
+</a></div><div class="nav-item"><a href="/mybatis/mybatis-overview.html" class="nav-link">
+  Mybatis
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Spring全家桶" class="dropdown-title"><span class="title">Spring全家桶</span> <span class="arrow down"></span></button> <button type="button" aria-label="Spring全家桶" class="mobile-dropdown-title"><span class="title">Spring全家桶</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/spring-all/spring-framework/ioc-interface.html" class="nav-link">
+  Spring Framework
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="拥抱云原生" class="dropdown-title"><span class="title">拥抱云原生</span> <span class="arrow down"></span></button> <button type="button" aria-label="拥抱云原生" class="mobile-dropdown-title"><span class="title">拥抱云原生</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cloud-native/cloud-native-concepts/" class="nav-link">
+  云原生概念
+</a></li><li class="dropdown-item"><!----> <a href="/cloud-native/docker/docker-overview/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/cloud-native/kubernetes/" class="nav-link">
+  Kubernetes
+</a></li><li class="dropdown-item"><!----> <a href="/cloud-native/devops/" class="nav-link">
+  DevOps
+</a></li></ul></div></div><div class="nav-item"><a href="/frontend/vue/vue-overview.html" class="nav-link">
+  前端 - Vue
+</a></div><div class="nav-item"><a href="/other/java8/why-java8.html" class="nav-link">
+  零散知识
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/java-core/exception.html" class="nav-link">
+  Java核心基础
+</a></div><div class="nav-item"><a href="/jvm/structure.html" class="nav-link">
+  JVM学习
+</a></div><div class="nav-item"><a href="/mybatis/mybatis-overview.html" class="nav-link">
+  Mybatis
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Spring全家桶" class="dropdown-title"><span class="title">Spring全家桶</span> <span class="arrow down"></span></button> <button type="button" aria-label="Spring全家桶" class="mobile-dropdown-title"><span class="title">Spring全家桶</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/spring-all/spring-framework/ioc-interface.html" class="nav-link">
+  Spring Framework
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="拥抱云原生" class="dropdown-title"><span class="title">拥抱云原生</span> <span class="arrow down"></span></button> <button type="button" aria-label="拥抱云原生" class="mobile-dropdown-title"><span class="title">拥抱云原生</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cloud-native/cloud-native-concepts/" class="nav-link">
+  云原生概念
+</a></li><li class="dropdown-item"><!----> <a href="/cloud-native/docker/docker-overview/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/cloud-native/kubernetes/" class="nav-link">
+  Kubernetes
+</a></li><li class="dropdown-item"><!----> <a href="/cloud-native/devops/" class="nav-link">
+  DevOps
+</a></li></ul></div></div><div class="nav-item"><a href="/frontend/vue/vue-overview.html" class="nav-link">
+  前端 - Vue
+</a></div><div class="nav-item"><a href="/other/java8/why-java8.html" class="nav-link">
+  零散知识
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>容器技术 Docker</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/cloud-native/docker/docker-overview.html" class="sidebar-link">Docker 概述</a></li><li><a href="/cloud-native/docker/docker-architecture.html" class="sidebar-link">Docker 架构</a></li><li><a href="/cloud-native/docker/docker-install.html" class="sidebar-link">Docker 安装</a></li><li><a href="/cloud-native/docker/docker-three-elements.html" class="sidebar-link">Docker 三要素</a></li><li><a href="/cloud-native/docker/docker-commands.html" aria-current="page" class="active sidebar-link">Docker 常用命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/cloud-native/docker/docker-commands.html#系统帮助命令" class="sidebar-link">系统帮助命令</a></li><li class="sidebar-sub-header"><a href="/cloud-native/docker/docker-commands.html#镜像相关命令" class="sidebar-link">镜像相关命令</a></li><li class="sidebar-sub-header"><a href="/cloud-native/docker/docker-commands.html#容器相关命令" class="sidebar-link">容器相关命令</a></li><li class="sidebar-sub-header"><a href="/cloud-native/docker/docker-commands.html#docker-1-13-命令管理升级" class="sidebar-link">Docker 1.13 命令管理升级</a></li><li class="sidebar-sub-header"><a href="/cloud-native/docker/docker-commands.html#docker-核心命令总结" class="sidebar-link">Docker 核心命令总结</a></li></ul></li><li><a href="/cloud-native/docker/docker-data-persistent.html" class="sidebar-link">Docker 数据持久化</a></li><li><a href="/cloud-native/docker/docker-network.html" class="sidebar-link">Docker 网络</a></li><li><a href="/cloud-native/docker/docker-install-service.html" class="sidebar-link">Docker 安装常用的软件</a></li><li><a href="/cloud-native/docker/docker-dockerfile.html" class="sidebar-link">Dockerfile</a></li><li><a href="/cloud-native/docker/docker-compose.html" class="sidebar-link">Docker Compose</a></li><li><a href="/cloud-native/docker/docker-ui.html" class="sidebar-link">Docker 可视化工具</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="docker-常用命令"><a href="#docker-常用命令" class="header-anchor">#</a> Docker 常用命令</h1> <p><code>Docker 官方命令大全</code>： https://docs.docker.com/reference/</p> <h2 id="系统帮助命令"><a href="#系统帮助命令" class="header-anchor">#</a> 系统帮助命令</h2> <blockquote><p>（1）docker version： 查询 docker 版本</p> <p>（2）docker info： 查看 docker 详细信息</p> <p>（3）docker --help：帮助命令</p> <p>（4）docker image --help： 查看单个命令的帮助说明</p> <p>（5）docker： 和 docker --help 一样用于显示 docker 的命令帮助</p> <p>（6）docker system： docker 管理相关命令（通过 docker system -help 得知它包含四个子命令）</p> <blockquote><p>docker system  df	查看 docker 整体磁盘占用情况</p></blockquote> <blockquote><p>docker system info</p></blockquote> <blockquote><p>docker system prune</p></blockquote> <blockquote><p>docker system events</p></blockquote></blockquote> <p><img src="/images/docker/7-docker%E5%91%BD%E4%BB%A4%E5%B8%AE%E5%8A%A9.png" alt="docker帮助指令"></p> <p><img src="/images/docker/8-docker%E5%B8%AE%E5%8A%A9%E5%91%BD%E4%BB%A42.png" alt="查看docke磁盘占用"></p> <h2 id="镜像相关命令"><a href="#镜像相关命令" class="header-anchor">#</a> 镜像相关命令</h2> <p><img src="/images/docker/9-%E9%95%9C%E5%83%8F%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4.png" alt="镜像相关命令"></p> <p>（1）<code>查看镜像</code>： docker image ls / docker images</p> <blockquote><p>docker images -a		列出所有镜像，包含中间层镜像
+docker images -q		列出所有镜像的 id</p> <p>docker images tomcat		列出 tomcat 的所有版本的镜像</p></blockquote> <p>（2）<code>拉取镜像</code>： docker image pull / docker pull</p> <blockquote><p>docker pull tomcat		拉取最新版本的 tomcat，等价于 docker pull tomcat:latest</p> <p>docker pull tomcat:8.5.61		拉取 8.5.61 版本的 tomcat 镜像</p></blockquote> <p>（3）<code>删除镜像</code>： docker image rm / docker rmi</p> <blockquote><p>docker rmi tomcat:8.5.61		删除 8.5.61 版本的镜像</p> <p>docker rmi -f tomcat		 强制删除 tomcat 镜像</p> <p>docker rmi -f $(docker images -qa)		强制删除所有的镜像</p></blockquote> <p>（4）<code>查看镜像细节</code>： docker image inspect / docker inspect</p> <blockquote><p>docker inspect 镜像id		查看镜像的内部详细信息</p></blockquote> <p>（5）<code>导入镜像</code>： docker image load / docker load</p> <blockquote><p>【选项】</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>-i	指定导入 tar 格式的文件
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>【用法】</p> <p>docker load -i xxx.tar		将 xxx.tar 导入成镜像文件并放到本地镜像仓库中</p></blockquote> <p>（6）<code>导出镜像</code>： docker image save / docker save</p> <blockquote><p>【作用】 将 docker 镜像导出为 tar 文件</p> <p>【用法】 docker  save  镜像名  -o  名称.tar</p></blockquote> <h2 id="容器相关命令"><a href="#容器相关命令" class="header-anchor">#</a> 容器相关命令</h2> <p><img src="/images/docker/10-%E5%AE%B9%E5%99%A8%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A41.png" alt="容器相关命令1"></p> <p><img src="/images/docker/11-%E5%AE%B9%E5%99%A8%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A42.png" alt="容器相关命令2"></p> <p>（1）<code>查看容器</code>： docker container ls / docker ps</p> <blockquote><p>【选项】</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>-a		查看所有的容器（正在运行的 + 没有运行的），-a 是 --all 的缩写
+-q		查看所有正在运行的容器的id，-q 是 --quiet 的缩写
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>【示例】</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>docker <span class="token function">ps</span>				 查看正在运行的容器
+docker <span class="token function">ps</span> -a			查看所有的容器
+docker <span class="token function">ps</span> -q			查看所有正在运行的容器的 ID
+docker <span class="token function">ps</span> -qa		 查看所有容器（正在运行 + 未运行）的 ID
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></blockquote> <p>（2）<code>运行容器</code>：docker container run / docker run</p> <p>官方的运行容器的命令选项大全： <a href="https://docs.docker.com/engine/reference/commandline/container_run/" target="_blank" rel="noopener noreferrer">docker run<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，也可以通过 docker run --help 获取查看该命令的选项参数</p> <blockquote><p>【选项】</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>-p				端口映射，-p 宿主机端口:容器内端口，-p 是 --publish 的缩写。可以写多个 -p，代表映射多个端口
+-e				设置环境变量，-e 是 --env 的缩写
+-d				容器以后台方式运行并返回容器 ID，默认是以前台方式启动
+-v				数据卷，实现宿主机的文件/目录和容器内的文件/目录的共享
+--name	 指定容器的名字
+
+-v 宿主机目录:容器目录
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>【示例】</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>docker run -p <span class="token number">8080</span>:8080 --name tomcat01 -d tomcat:8.0.52 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></blockquote> <p>（3）<code>启动容器</code>： docker container start / docker start</p> <p>（4）<code>停止容器</code>： docker container stop / docker stop</p> <p>（5）<code>重启容器</code>： docker container restart / docker restart</p> <p>（6）<code>删除容器</code>： docker container rm / docker rm</p> <blockquote><p>【选项】</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>-f		强制删除容器（可以删除正在运行的容器），-f 是 --force 的缩写。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>【示例】</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>docker <span class="token function">rm</span> 容器id		删除容器，如果该容器正在运行，则会报错
+docker <span class="token function">rm</span> -f 容器id		强制删除容器，可以删除正在运行的容器
+docker <span class="token function">rm</span> -f <span class="token variable"><span class="token variable">$(</span>docker <span class="token function">ps</span> -qa<span class="token variable">)</span></span>		强制删除所有的容器
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></blockquote> <p>（7）<code>删除无用的容器</code>：</p> <p>（7）<code>杀死容器</code>： docker container kill / docker kill</p> <p>（8）<code>查看日志</code>： docker container logs / docker logs</p> <blockquote><p>【选项】</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>-f		实时查看日志
+
+-t		显示时间戳
+
+--tail	显示日志的最后多少行， --tail <span class="token number">10</span> 表示显示日志的最后10行
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>【示例】</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>docker logs tomcat01		查看名称为 tomcat01 容器的日志
+docker logs -f tomcat01		实时查看名称为 tomcat01 容器的日志
+docker logs -tf tomcat			实时查看日志并显示时间戳
+docker logs -f --tail <span class="token number">10</span> tomcat01		实时查看 tomcat01 容器的最后10行日志
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></blockquote> <p>（10）<code>查看容器细节</code>： docker container inspect / docker inspect</p> <blockquote><p>【用法】docker inspect 容器id/容器名称</p> <p>【作用】查看容器内部细节：网络、数据卷、状态、端口暴露时间、id、名称、创建时间等等</p> <div class="language-shel line-numbers-mode"><pre class="language-text"><code>[
+{
+&quot;Id&quot;: &quot;13a79917c0376aae59ef5f079935146714f4d61358483c9549d2adaecb6e4c0d&quot;,
+&quot;Created&quot;: &quot;2021-01-28T11:15:37.324217186Z&quot;,
+&quot;Path&quot;: &quot;catalina.sh&quot;,
+&quot;Args&quot;: [
+ &quot;run&quot;
+],
+&quot;State&quot;: {
+ &quot;Status&quot;: &quot;running&quot;,
+ &quot;Running&quot;: true,
+ &quot;Paused&quot;: false,
+ &quot;Restarting&quot;: false,
+ &quot;OOMKilled&quot;: false,
+ &quot;Dead&quot;: false,
+ &quot;Pid&quot;: 1487,
+ &quot;ExitCode&quot;: 0,
+ &quot;Error&quot;: &quot;&quot;,
+ &quot;StartedAt&quot;: &quot;2021-01-28T12:00:35.118892057Z&quot;,
+ &quot;FinishedAt&quot;: &quot;2021-01-28T19:59:50.080273708+08:00&quot;
+},
+&quot;Image&quot;: &quot;sha256:b4b762737ed4b8e790749d95dbd13c49e21ffbb2fbf12d9609ab1ffa519aa70c&quot;,
+&quot;ResolvConfPath&quot;: &quot;/var/lib/docker/containers/13a79917c0376aae59ef5f079935146714f4d61358483c9549d2adaecb6e4c0d/resolv.conf&quot;,
+&quot;HostnamePath&quot;: &quot;/var/lib/docker/containers/13a79917c0376aae59ef5f079935146714f4d61358483c9549d2adaecb6e4c0d/hostname&quot;,
+&quot;HostsPath&quot;: &quot;/var/lib/docker/containers/13a79917c0376aae59ef5f079935146714f4d61358483c9549d2adaecb6e4c0d/hosts&quot;,
+&quot;LogPath&quot;: &quot;/var/lib/docker/containers/13a79917c0376aae59ef5f079935146714f4d61358483c9549d2adaecb6e4c0d/13a79917c0376aae59ef5f079935146714f4d61358483c9549d2adaecb6e4c0d-json.log&quot;,
+&quot;Name&quot;: &quot;/tomcat01&quot;,
+&quot;RestartCount&quot;: 0,
+&quot;Driver&quot;: &quot;overlay2&quot;,
+&quot;Platform&quot;: &quot;linux&quot;,
+&quot;MountLabel&quot;: &quot;&quot;,
+&quot;ProcessLabel&quot;: &quot;&quot;,
+&quot;AppArmorProfile&quot;: &quot;&quot;,
+&quot;ExecIDs&quot;: null,
+&quot;HostConfig&quot;: {
+ &quot;Binds&quot;: null,
+ &quot;ContainerIDFile&quot;: &quot;&quot;,
+ &quot;LogConfig&quot;: {
+     &quot;Type&quot;: &quot;json-file&quot;,
+     &quot;Config&quot;: {}
+ },
+ &quot;NetworkMode&quot;: &quot;default&quot;,
+ &quot;PortBindings&quot;: {
+     &quot;8080/tcp&quot;: [
+         {
+             &quot;HostIp&quot;: &quot;&quot;,
+             &quot;HostPort&quot;: &quot;8080&quot;
+         }
+     ]
+ },
+ &quot;RestartPolicy&quot;: {
+     &quot;Name&quot;: &quot;no&quot;,
+     &quot;MaximumRetryCount&quot;: 0
+ },
+ &quot;AutoRemove&quot;: false,
+ &quot;VolumeDriver&quot;: &quot;&quot;,
+ &quot;VolumesFrom&quot;: null,
+ &quot;CapAdd&quot;: null,
+ &quot;CapDrop&quot;: null,
+ &quot;Capabilities&quot;: null,
+ &quot;Dns&quot;: [],
+ &quot;DnsOptions&quot;: [],
+ &quot;DnsSearch&quot;: [],
+ &quot;ExtraHosts&quot;: null,
+ &quot;GroupAdd&quot;: null,
+ &quot;IpcMode&quot;: &quot;private&quot;,
+ &quot;Cgroup&quot;: &quot;&quot;,
+ &quot;Links&quot;: null,
+ &quot;OomScoreAdj&quot;: 0,
+ &quot;PidMode&quot;: &quot;&quot;,
+ &quot;Privileged&quot;: false,
+ &quot;PublishAllPorts&quot;: false,
+ &quot;ReadonlyRootfs&quot;: false,
+ &quot;SecurityOpt&quot;: null,
+ &quot;UTSMode&quot;: &quot;&quot;,
+ &quot;UsernsMode&quot;: &quot;&quot;,
+ &quot;ShmSize&quot;: 67108864,
+ &quot;Runtime&quot;: &quot;runc&quot;,
+ &quot;ConsoleSize&quot;: [
+     0,
+     0
+ ],
+ &quot;Isolation&quot;: &quot;&quot;,
+ &quot;CpuShares&quot;: 0,
+ &quot;Memory&quot;: 0,
+ &quot;NanoCpus&quot;: 0,
+ &quot;CgroupParent&quot;: &quot;&quot;,
+ &quot;BlkioWeight&quot;: 0,
+ &quot;BlkioWeightDevice&quot;: [],
+ &quot;BlkioDeviceReadBps&quot;: null,
+ &quot;BlkioDeviceWriteBps&quot;: null,
+ &quot;BlkioDeviceReadIOps&quot;: null,
+ &quot;BlkioDeviceWriteIOps&quot;: null,
+ &quot;CpuPeriod&quot;: 0,
+ &quot;CpuQuota&quot;: 0,
+ &quot;CpuRealtimePeriod&quot;: 0,
+ &quot;CpuRealtimeRuntime&quot;: 0,
+ &quot;CpusetCpus&quot;: &quot;&quot;,
+ &quot;CpusetMems&quot;: &quot;&quot;,
+ &quot;Devices&quot;: [],
+ &quot;DeviceCgroupRules&quot;: null,
+ &quot;DeviceRequests&quot;: null,
+ &quot;KernelMemory&quot;: 0,
+ &quot;KernelMemoryTCP&quot;: 0,
+ &quot;MemoryReservation&quot;: 0,
+ &quot;MemorySwap&quot;: 0,
+ &quot;MemorySwappiness&quot;: null,
+ &quot;OomKillDisable&quot;: false,
+ &quot;PidsLimit&quot;: null,
+ &quot;Ulimits&quot;: null,
+ &quot;CpuCount&quot;: 0,
+ &quot;CpuPercent&quot;: 0,
+ &quot;IOMaximumIOps&quot;: 0,
+ &quot;IOMaximumBandwidth&quot;: 0,
+ &quot;MaskedPaths&quot;: [
+     &quot;/proc/asound&quot;,
+     &quot;/proc/acpi&quot;,
+     &quot;/proc/kcore&quot;,
+     &quot;/proc/keys&quot;,
+     &quot;/proc/latency_stats&quot;,
+     &quot;/proc/timer_list&quot;,
+     &quot;/proc/timer_stats&quot;,
+     &quot;/proc/sched_debug&quot;,
+     &quot;/proc/scsi&quot;,
+     &quot;/sys/firmware&quot;
+ ],
+ &quot;ReadonlyPaths&quot;: [
+     &quot;/proc/bus&quot;,
+     &quot;/proc/fs&quot;,
+     &quot;/proc/irq&quot;,
+     &quot;/proc/sys&quot;,
+     &quot;/proc/sysrq-trigger&quot;
+ ]
+},
+&quot;GraphDriver&quot;: {
+ &quot;Data&quot;: {
+     &quot;LowerDir&quot;: &quot;/var/lib/docker/overlay2/20b3f0bba2e02188a30d5665fbcbcf7dac0ef303a45b0f1f18c30d4678c7248e-init/diff:/var/lib/docker/overlay2/56135837a07b429c6a7f661ddcb78d01d88d91658c1c77cbde67f380de0bd3a0/diff:/var/lib/docker/overlay2/b336da99705cd776b5aa0d0ceb6467e85b00504b59e7b139ffeba1af178e6292/diff:/var/lib/docker/overlay2/412fc5ae4bbe8124bfc61ccabe71e541b337c1e3bb27c25bd2db91af8df96db9/diff:/var/lib/docker/overlay2/df6c77f85adb2bc7ef6270dbab4d7b1b90336ee8b99b2836475eade53af6d5a5/diff:/var/lib/docker/overlay2/b4867f11abd58e7541ff0a76f168be7651de23c37ac5b44ff2f04a0c3e4e2786/diff:/var/lib/docker/overlay2/1e4fc579c7bdc873991722fe3a3638596a87743a62b5c15e00014b5ac0836c57/diff:/var/lib/docker/overlay2/65d67a788eda3bf398187b9319e466d7dca3b7155cad5a395bd27590210d56e9/diff:/var/lib/docker/overlay2/f5b6be894306def088d7dd3c2d2150ace512532b1bf992f70ce944df6666a6da/diff:/var/lib/docker/overlay2/90438072f7dfa630101d6c46175506f3d8aa3be0e3cc2989b289460720fe4e22/diff:/var/lib/docker/overlay2/b380b718c853d40fb2194c49471e9cbba80182e97b86c0744545ba2bf79d1f79/diff:/var/lib/docker/overlay2/21d4c6b258429980c6234bf5ab9d2458c23cebeb13c06ac3bc657151c7da874a/diff&quot;,
+     &quot;MergedDir&quot;: &quot;/var/lib/docker/overlay2/20b3f0bba2e02188a30d5665fbcbcf7dac0ef303a45b0f1f18c30d4678c7248e/merged&quot;,
+     &quot;UpperDir&quot;: &quot;/var/lib/docker/overlay2/20b3f0bba2e02188a30d5665fbcbcf7dac0ef303a45b0f1f18c30d4678c7248e/diff&quot;,
+     &quot;WorkDir&quot;: &quot;/var/lib/docker/overlay2/20b3f0bba2e02188a30d5665fbcbcf7dac0ef303a45b0f1f18c30d4678c7248e/work&quot;
+ },
+ &quot;Name&quot;: &quot;overlay2&quot;
+},
+&quot;Mounts&quot;: [],
+&quot;Config&quot;: {
+ &quot;Hostname&quot;: &quot;13a79917c037&quot;,
+ &quot;Domainname&quot;: &quot;&quot;,
+ &quot;User&quot;: &quot;&quot;,
+ &quot;AttachStdin&quot;: false,
+ &quot;AttachStdout&quot;: false,
+ &quot;AttachStderr&quot;: false,
+ &quot;ExposedPorts&quot;: {
+     &quot;8080/tcp&quot;: {}
+ },
+ &quot;Tty&quot;: false,
+ &quot;OpenStdin&quot;: false,
+ &quot;StdinOnce&quot;: false,
+ &quot;Env&quot;: [
+     &quot;PATH=/usr/local/tomcat/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;,
+     &quot;LANG=C.UTF-8&quot;,
+     &quot;JAVA_HOME=/docker-java-home/jre&quot;,
+     &quot;JAVA_VERSION=7u181&quot;,
+     &quot;JAVA_DEBIAN_VERSION=7u181-2.6.14-1~deb8u1&quot;,
+     &quot;CATALINA_HOME=/usr/local/tomcat&quot;,
+     &quot;TOMCAT_NATIVE_LIBDIR=/usr/local/tomcat/native-jni-lib&quot;,
+     &quot;LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib&quot;,
+     &quot;OPENSSL_VERSION=1.1.0f-3+deb9u2&quot;,
+     &quot;GPG_KEYS=05AB33110949707C93A279E3D3EFE6B686867BA6 07E48665A34DCAFAE522E5E6266191C37C037D42 47309207D818FFD8DCD3F83F1931D684307A10A5 541FBE7D8F78B25E055DDEE13C370389288584E7 61B832AC2F1C5A90F0F9B00A1C506407564C17A3 713DA88BE50911535FE716F5208B0AB1D63011C7 79F7026C690BAA50B92CD8B66A3AD3F4F22C4FED 9BA44C2621385CB966EBA586F72C284D731FABEE A27677289986DB50844682F8ACB77FC2E86E29AC A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23&quot;,
+     &quot;TOMCAT_MAJOR=8&quot;,
+     &quot;TOMCAT_VERSION=8.0.52&quot;,
+     &quot;TOMCAT_SHA512=23ba3c005d2e1bff30360a7aca5882ba7acaef0001395b1f77eb182c1f9c6a48db7f39b9f71ebdfb20668eca32c5f03bf00364f77d47e368850a794f6d65ea56&quot;,
+     &quot;TOMCAT_TGZ_URLS=https://www.apache.org/dyn/closer.cgi?action=download&amp;filename=tomcat/tomcat-8/v8.0.52/bin/apache-tomcat-8.0.52.tar.gz \thttps://www-us.apache.org/dist/tomcat/tomcat-8/v8.0.52/bin/apache-tomcat-8.0.52.tar.gz \thttps://www.apache.org/dist/tomcat/tomcat-8/v8.0.52/bin/apache-tomcat-8.0.52.tar.gz \thttps://archive.apache.org/dist/tomcat/tomcat-8/v8.0.52/bin/apache-tomcat-8.0.52.tar.gz&quot;,
+     &quot;TOMCAT_ASC_URLS=https://www.apache.org/dyn/closer.cgi?action=download&amp;filename=tomcat/tomcat-8/v8.0.52/bin/apache-tomcat-8.0.52.tar.gz.asc \thttps://www-us.apache.org/dist/tomcat/tomcat-8/v8.0.52/bin/apache-tomcat-8.0.52.tar.gz.asc \thttps://www.apache.org/dist/tomcat/tomcat-8/v8.0.52/bin/apache-tomcat-8.0.52.tar.gz.asc \thttps://archive.apache.org/dist/tomcat/tomcat-8/v8.0.52/bin/apache-tomcat-8.0.52.tar.gz.asc&quot;
+ ],
+ &quot;Cmd&quot;: [
+     &quot;catalina.sh&quot;,
+     &quot;run&quot;
+ ],
+ &quot;Image&quot;: &quot;tomcat:8.0.52&quot;,
+ &quot;Volumes&quot;: null,
+ &quot;WorkingDir&quot;: &quot;/usr/local/tomcat&quot;,
+ &quot;Entrypoint&quot;: null,
+ &quot;OnBuild&quot;: null,
+ &quot;Labels&quot;: {}
+},
+&quot;NetworkSettings&quot;: {
+ &quot;Bridge&quot;: &quot;&quot;,
+ &quot;SandboxID&quot;: &quot;6f4c4f1adbeefd5d86cc00a19e8113326e924017351e25828e4d944496305818&quot;,
+ &quot;HairpinMode&quot;: false,
+ &quot;LinkLocalIPv6Address&quot;: &quot;&quot;,
+ &quot;LinkLocalIPv6PrefixLen&quot;: 0,
+ &quot;Ports&quot;: {
+     &quot;8080/tcp&quot;: [
+         {
+             &quot;HostIp&quot;: &quot;0.0.0.0&quot;,
+             &quot;HostPort&quot;: &quot;8080&quot;
+         }
+     ]
+ },
+ &quot;SandboxKey&quot;: &quot;/var/run/docker/netns/6f4c4f1adbee&quot;,
+ &quot;SecondaryIPAddresses&quot;: null,
+ &quot;SecondaryIPv6Addresses&quot;: null,
+ &quot;EndpointID&quot;: &quot;e6354e92f2a7f4da8d8205e675dd2ff20bceb180223981c25e39cde4f1bca136&quot;,
+ &quot;Gateway&quot;: &quot;172.17.0.1&quot;,
+ &quot;GlobalIPv6Address&quot;: &quot;&quot;,
+ &quot;GlobalIPv6PrefixLen&quot;: 0,
+ &quot;IPAddress&quot;: &quot;172.17.0.2&quot;,
+ &quot;IPPrefixLen&quot;: 16,
+ &quot;IPv6Gateway&quot;: &quot;&quot;,
+ &quot;MacAddress&quot;: &quot;02:42:ac:11:00:02&quot;,
+ &quot;Networks&quot;: {
+     &quot;bridge&quot;: {
+         &quot;IPAMConfig&quot;: null,
+         &quot;Links&quot;: null,
+         &quot;Aliases&quot;: null,
+         &quot;NetworkID&quot;: &quot;5c0412f63fb286d692c3a248984cc433ec5fc967974fef8ed64a75f6262bf643&quot;,
+         &quot;EndpointID&quot;: &quot;e6354e92f2a7f4da8d8205e675dd2ff20bceb180223981c25e39cde4f1bca136&quot;,
+         &quot;Gateway&quot;: &quot;172.17.0.1&quot;,
+         &quot;IPAddress&quot;: &quot;172.17.0.2&quot;,
+         &quot;IPPrefixLen&quot;: 16,
+         &quot;IPv6Gateway&quot;: &quot;&quot;,
+         &quot;GlobalIPv6Address&quot;: &quot;&quot;,
+         &quot;GlobalIPv6PrefixLen&quot;: 0,
+         &quot;MacAddress&quot;: &quot;02:42:ac:11:00:02&quot;,
+         &quot;DriverOpts&quot;: null
+     }
+ }
+}
+}
+]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br><span class="line-number">218</span><br><span class="line-number">219</span><br><span class="line-number">220</span><br><span class="line-number">221</span><br><span class="line-number">222</span><br><span class="line-number">223</span><br><span class="line-number">224</span><br><span class="line-number">225</span><br><span class="line-number">226</span><br><span class="line-number">227</span><br><span class="line-number">228</span><br><span class="line-number">229</span><br><span class="line-number">230</span><br></div></div></blockquote> <p>（10）<code>进入容器内部</code>： docker exec</p> <blockquote><p>【用法】</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 以交互模式进入容器内部，并通过 bash 控制台和容器进行交互</span>
+docker <span class="token builtin class-name">exec</span> -it 容器id/容器名称 <span class="token function">bash</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>注意顺序不能错： bash 要写在容器id后面</p></blockquote> <p>（11）<code>容器和宿主机之间复制文件</code>： docker container cp / docker cp</p> <blockquote><p>【用法】</p> <p>（1）从容器中复制文件到宿主机：</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>docker <span class="token function">cp</span> 容器ID:容器内的路径  宿主机路径
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>（2）从宿主机复制文件到容器内：</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>docker <span class="token function">cp</span> 文件<span class="token operator">|</span>目录  容器ID:容器路径
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>【示例】</p> <p>（1）将容器内的目录/文件复制到宿主机</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 将 tomcat01 容器中的 webapps 目录下的 tt.txt 文件复制到宿主机的当前目录下</span>
+docker <span class="token function">cp</span> tomcat01:/usr/local/tomcat/webapps/tt.txt ./
+
+<span class="token comment"># 将 tomcat01 容器中的 webapps 目录复制到宿主机的当前目录下</span>
+docker <span class="token function">cp</span> tomcat01:/usr/local/tomcat/webapps/ ./
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>（2）将宿主机的目录/文件复制到容器内</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 将宿主机当前目录下的 a.txt 文件复制到 tomcat01 容器下的 tomcat 目录下</span>
+docker <span class="token function">cp</span> ./a.txt tomcat01:usr/local/tomcat/
+
+<span class="token comment"># 将宿主机当前目录下的 a.txt 文件复制到 tomcat01 容器下的 tomcat 目录下并重命名为 b.txt</span>
+docker <span class="token function">cp</span> ./a.txt tomcat01:usr/local/tomcat/b.txt
+
+<span class="token comment"># 将宿主机的当前目录中的 test 目录复制到 tomcat01 容器的 tomcat 目录下</span>
+docker <span class="token function">cp</span> test/ tomcat01:/usr/local/tomcat/
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></blockquote> <p>（12）<code>查看容器内进程</code>： docker top</p> <p>（13）<code>容器打包成镜像</code>： docker container commit / docker commit</p> <blockquote><p>【选项】</p> <p>-a		作者信息</p> <p>-m		提交信息</p> <p>-p		提交的时候暂停容器，默认的值就是 ture。即将当前容器提交成镜像的时候，容器会有短暂的暂停状态</p> <p>【示例】</p> <p>docker  commit  -a &quot;zzp&quot;  -m  &quot;我的第一个 tomcat 镜像&quot;   容器id  mytomcat:1.0.0</p></blockquote> <h2 id="docker-1-13-命令管理升级"><a href="#docker-1-13-命令管理升级" class="header-anchor">#</a> Docker 1.13 命令管理升级</h2> <p>在 1.13 版本中， Docker 向 CLI 添加了一些有用的命令，让环境更加整洁。对命令做了更好的分类管理。</p> <blockquote><p>英文博客： https://blog.couchbase.com/docker-1-13-management-commands/</p> <p>中文博客： https://developer.aliyun.com/article/225201</p> <p>备用链接： https://www.cnblogs.com/me115/p/6366391.html</p></blockquote> <h2 id="docker-核心命令总结"><a href="#docker-核心命令总结" class="header-anchor">#</a> Docker 核心命令总结</h2> <p><img src="/images/docker/100.docker%E7%9A%84%E6%A0%B8%E5%BF%83%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93.png" alt="docker核心命令总结"></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/cloud-native/docker/docker-three-elements.html" class="prev">
+        Docker 三要素
+      </a></span> <span class="next"><a href="/cloud-native/docker/docker-data-persistent.html">
+        Docker 数据持久化
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.fa9b922e.js" defer></script><script src="/assets/js/2.25cc5d58.js" defer></script><script src="/assets/js/10.a87e3e41.js" defer></script>
+  </body>
+</html>
